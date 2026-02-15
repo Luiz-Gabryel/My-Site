@@ -1,12 +1,115 @@
-body{ background-color: rgb(163, 0, 196)
-}
-p{ color: brown;
-  text-align: red
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-  color: rgb(255, 255, 255);
-  background-color: rgb(166, 0, 255);
-  padding: 20px;
-  text-align: center;
+/* corpinho dele */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f172a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* heads */
+header {
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* seção */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2563eb;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* projetos mis */
+.projetos {
+    text-align: center;
+}
+
+/* cartinhas */
+.card {
+    background: #1e293b;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+/* era pra funcionar, quando passa mouse */
+.card:hover {
+    transform: translateY(-8px);
+    background: #2563eb;
+}
+
+/* organizar ao lado*/
+.projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 280px;
+}
+
+/* fotter */
+footer {
+    background: #1e293b;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #2563eb;
+}
+
+/* responsibilidade */
+@media (max-width: 768px) {
+    .projetos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
 }
