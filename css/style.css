@@ -115,3 +115,30 @@ footer p {
         width: 90%;
     }
 }
+
+footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;              /* mesma cor do texto */
+  text-decoration: none;    /* remove sublinhado */
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #00bcd4;           /* cor ao passar o mouse */
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 10px;
+  font-weight: 500;
+}
