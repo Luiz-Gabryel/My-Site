@@ -5,23 +5,23 @@
     box-sizing: border-box;
 }
 
-/* corpinho dele */
+/* bo */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #0f172a;
-    color: #ffffff;
+    background: #190019;
+    color: #FBE4D8;
     line-height: 1.6;
 }
 
-/* heads */
+/* head */
 header {
-    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    background: linear-gradient(90deg, #2B124C, #522B5B);
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
@@ -30,61 +30,63 @@ header p {
     opacity: 0.9;
 }
 
-/* seção */
+/* secois */
 section {
     max-width: 1000px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 h2 {
-    margin-bottom: 20px;
-    border-bottom: 2px solid #2563eb;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #854F6C;
     display: inline-block;
     padding-bottom: 5px;
 }
 
-/* projetos mis */
-.projetos {
-    text-align: center;
+/* sobre */
+.sobre p {
+    font-size: 18px;
 }
 
-/* cartinhas */
-.card {
-    background: #1e293b;
-    padding: 25px;
-    margin: 15px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-/* pfvr nao mexer */
-.card:hover {
-    transform: translateY(-8px);
-    background: #2563eb;
-}
-
-/* organizar ao lado*/
+/* projetos meus */
 .projetos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.card {
-    width: 280px;
-}
-
-/* fotter */
-footer {
-    background: #1e293b;
+    gap: 20px;
     text-align: center;
-    padding: 40px 20px;
-    margin-top: 40px;
 }
 
-footer h2 {
-    margin-bottom: 15px;
+/* carts nao mexer */
+.card {
+    background: #2B124C;
+    padding: 30px;
+    border-radius: 15px;
+    width: 280px;
+    text-decoration: none;
+    color: #FBE4D8;
+    border: 1px solid #522B5B;
+    transition: all 0.3s ease;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #522B5B;
+    border-color: #854F6C;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/*  socorro */
+footer {
+    background: #2B124C;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 40px;
 }
 
 footer p {
@@ -92,14 +94,14 @@ footer p {
 }
 
 .social-icons a {
-    color: white;
+    color: #FBE4D8;
     text-decoration: none;
     font-size: 18px;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
-    color: #2563eb;
+    color: #DFB6B2;
 }
 
 /* responsibilidade */
