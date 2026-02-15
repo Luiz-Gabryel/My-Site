@@ -58,7 +58,7 @@ h2 {
     transition: 0.3s;
 }
 
-/* era pra funcionar, quando passa mouse */
+/* pfvr nao mexer */
 .card:hover {
     transform: translateY(-8px);
     background: #2563eb;
