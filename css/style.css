@@ -125,12 +125,12 @@ footer {
 
 footer a {
   color: #fff;              /* mesma cor do texto */
-  text-decoration: none;    /* remove sublinhado */
+  text-decoration: none;    /* remove subrinhado */
   transition: 0.3s;
 }
 
 footer a:hover {
-  color: #00bcd4;           /* cor ao passar o mouse */
+  color: #2B124C;           /* cor quando o mouse ta nele */
 }
 
 .social-icons {
