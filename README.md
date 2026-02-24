@@ -1,2 +1,2 @@
 # My-Site
-https://luizgabryel.netlify.app/
+https://luiz-gabryel.vercel.app/
