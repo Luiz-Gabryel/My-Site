@@ -2,19 +2,31 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- sem isso o celular fica com zoom bizarro como se fosse pc em miniatura -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luiz Gabryel | Portfólio</title>
+
+  <!-- meu css -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- icones do font awesome — nao esquece de carregar isso ou some tudo -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- fontes bonitas do google, carregando duas de uma vez - melhor nao mexer mais-->
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- HEADER: primeira impressao, primeira inpre -->
   <header>
     <div class="header-inner">
+      <!-- badge verde  -->
       <div class="header-badge">Disponível para projetos</div>
+
       <h1>Luiz Gabryel</h1>
       <p>Estudante de Desenvolvimento de Sistemas</p>
+
+      <!-- tagzinhas das tecnologias que sei -->
       <div class="header-tags">
         <span>Python</span>
         <span>HTML & CSS</span>
@@ -23,56 +35,90 @@
     </div>
   </header>
 
+  <!-- MAIN: conteudo principal separado do header e footer -->
   <main>
+
+    <!-- SOBRE MIM: texto curto que fala quem sou, mas quem sou eu... Voce e o mais forte por ser gojo ou e gojo por ser o mais forte? -->
     <section class="sobre">
       <h2>Sobre Mim</h2>
       <p>
         Sou estudante de TI com foco em desenvolvimento de sistemas.<br>
-        Atualmente estudo Python e construo projetos práticos para melhorar meu aprendizado.
+        Atualmente estudo Python e construo projetos práticos para solidificar meu aprendizado.
       </p>
     </section>
 
+    <!-- PROJETOS: cards com links pros meus repos -->
     <section class="projetos-section">
       <h2>Projetos</h2>
       <div class="projetos">
-        <a class="card" href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema/tree/main/luiz-gabryel/curso-tecnico/python/desafios/controle-estoque" target="_blank" rel="noopener">
+
+        <!-- card 1: sistema de estoque em python -->
+        <!-- rel="noopener" e seguranca em links target blank -->
+        <a class="card"
+           href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema/tree/main/luiz-gabryel/curso-tecnico/python/desafios/controle-estoque"
+           target="_blank"
+           rel="noopener">
           <div class="card-icon">📚</div>
           <h3>Controle de Estoque</h3>
           <p>Sistema em Python para controle de livros.</p>
           <span class="card-tag">Python</span>
         </a>
-        <a class="card" href="https://luiz-gabryel.vercel.app/" target="_blank" rel="noopener">
+
+        <!-- card 2: esse site aqui mesmo - nao me pergunte pq -->
+        <a class="card"
+           href="https://luiz-gabryel.vercel.app/"
+           target="_blank"
+           rel="noopener">
           <div class="card-icon">🌐</div>
           <h3>Portfólio</h3>
           <p>Site pessoal desenvolvido com HTML e CSS.</p>
           <span class="card-tag">HTML · CSS</span>
         </a>
-        <a class="card" href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema" target="_blank" rel="noopener">
+
+        <!-- card 3: repositorio principal do curso -->
+        <a class="card"
+           href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema"
+           target="_blank"
+           rel="noopener">
           <div class="card-icon">💻</div>
           <h3>Repositório do Curso</h3>
           <p>Todos os exercícios e desafios do curso técnico.</p>
           <span class="card-tag">GitHub</span>
         </a>
+
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER: contatos e redes sociais — id="contato" pra quem quiser linkar direto aqui -->
   <footer id="contato">
     <h2>Entre em Contato</h2>
+
+    <!-- grid de botoes de contato — cada um e um link clicavel -->
     <div class="contato-grid">
+
+      <!-- tel: abre no celular automaticamente -->
       <a href="tel:+5511989017556" class="contato-item">
         <i class="fas fa-phone"></i>
         <span>(11) 98901-7556</span>
       </a>
+
+      <!-- meu email: abre o app de email -->
       <a href="mailto:luizgabryel515@gmail.com" class="contato-item">
         <i class="fas fa-envelope"></i>
         <span>luizgabryel515@gmail.com</span>
       </a>
+
+      <!-- github: abre numa aba nova -->
       <a href="https://github.com/luiz-gabryel" target="_blank" rel="noopener" class="contato-item">
         <i class="fab fa-github"></i>
         <span>GitHub</span>
       </a>
+
     </div>
+
+    <!-- copyright la embaixo, ano atualizado -->
     <p class="copyright">© 2026 — Luiz Gabryel</p>
   </footer>
 
