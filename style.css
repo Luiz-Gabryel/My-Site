@@ -1,153 +1,283 @@
-/* reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* RESET — zerando tudo porque o browser acha que sabe melhor que eu */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
 }
 
-/* bo */
+/* VARIÁVEIS — minhas cores */
+:root {
+  --bg: #190019;           /* roxo escuro estilo meia noite */
+  --bg-card: #2B124C;      /* roxo menos escuro */
+  --bg-card-hover: #522B5B;/* roxo do hover, nao mexa */
+  --accent: #854F6C;       /* rosa roxado que fica bonito */
+  --accent-light: #DFB6B2; /* rosa clarinho pra texto */
+  --text: #FBE4D8;         /* quase branco mas com personalidade */
+  --text-muted: rgba(251, 228, 216, 0.65); /* texto apagado */
+  --border: #522B5B;       /* borda que existe mas nao grita */
+  --radius: 16px;          /* cantos arredondados porque arestas sao brutas */
+  --transition: 0.3s ease; /* transicao suave */
+  --font-display: 'Syne', sans-serif;    /* fonte bonita do header */
+  --font-mono: 'Space Mono', monospace; /* fonte de programador pra tags */
+}
+
+/* BASE — o minimo pra nao explodir na primeira pagina */
+html {
+  scroll-behavior: smooth; /* rola suave tipo quem tem pacienci */
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #190019;
-    color: #FBE4D8;
-    line-height: 1.6;
+  font-family: var(--font-display);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7; /* sla man*/
+  min-height: 100vh; /* ocupa a tela toda mesmo vazia */
 }
 
-/* head */
+/* HEADER — primeira coisa que nos  ve, entao tem que impressionar */
 header {
-    background: linear-gradient(90deg, #2B124C, #522B5B);
-    text-align: center;
-    padding: 60px 20px;
+  background: linear-gradient(135deg, #2B124C 0%, #522B5B 60%, #190019 100%);
+  text-align: center;
+  padding: clamp(50px, 10vw, 100px) 20px; /* clamp = nao fica pequeno demais nem gigante demais */
+  position: relative;
+  overflow: hidden; /* esconde o ::before que transbordaria */
 }
 
+/* esse ::before e so um brilho decorativo, nao faz nada funcional mas fica bonitinho */
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0; /* shorthand pra top right bottom left 0 */
+  background: radial-gradient(ellipse at 70% 50%, rgba(133, 79, 108, 0.25) 0%, transparent 70%);
+  pointer-events: none; /* sem isso o brilho bloquearia os cliques,pfvr nao mexer */
+}
+
+/* wrapper interno pra centralizar o conteudo sem afetar o ::before */
+.header-inner {
+  position: relative;
+  z-index: 1; /* fica na frente do ::before */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* aquele badge "disponivel pra projetos" */
+.header-badge {
+  display: inline-block;
+  background: rgba(133, 79, 108, 0.3);
+  border: 1px solid var(--accent);
+  color: var(--accent-light);
+  font-family: var(--font-mono);
+  font-size: clamp(10px, 2vw, 12px);
+  letter-spacing: 0.1em;  /* espacamento entre letras tipo coisa sofisticada 😃 */
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px; /* pill format */
+  margin-bottom: 20px;
+}
+
+/* meu nome em tamanho ajustavel — clamp(minimo, ideal, maximo) */
 header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+  font-size: clamp(32px, 8vw, 58px); /* no celular 32px, no pc 58px, no meio se vira nus trinta */
+  font-weight: 800;
+  letter-spacing: -0.02em; /* comprime um pouquinho */
+  line-height: 1.1;
+  margin-bottom: 12px;
 }
 
 header p {
-    font-size: 18px;
-    opacity: 0.9;
+  font-size: clamp(14px, 3vw, 18px);
+  color: var(--text-muted);
+  margin-bottom: 24px;
 }
 
-/* secois */
+/* tagzinhas de tecnologias embaixo de my name */
+.header-tags {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap; /* se nao couber em linha, quebra pra proxima  */
+}
+
+.header-tags span {
+  font-family: var(--font-mono);
+  font-size: clamp(11px, 2vw, 13px);
+  background: rgba(43, 18, 76, 0.8);
+  border: 1px solid var(--border);
+  color: var(--accent-light);
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+/* MAIN — container que centraliza tudo e da padding nas laterais */
+main {
+  max-width: 1100px;
+  margin: 0 auto; /* centraliza horizontalmente */
+  padding: 0 clamp(16px, 5vw, 40px); /* mais padding em telas grandes, menos no celular */
+}
+
 section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 20px;
+  padding: clamp(40px, 8vw, 80px) 0;
 }
 
+/* h2 com uma linha decorativa que cresce ate o fina */
 h2 {
-    margin-bottom: 25px;
-    border-bottom: 2px solid #854F6C;
-    display: inline-block;
-    padding-bottom: 5px;
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 800;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-/* sobre */
+/* essa linha depois do titulo — flex: 1 faz ela preencher o espaco restante */
+h2::after {
+  content: '';
+  flex: 1; /* ocupa todo espaco sobrando depois do texto */
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), transparent); /* some no fim */
+  border-radius: 2px;
+}
+
+/* SOBRE MIM — texto simples sem firula */
 .sobre p {
-    font-size: 18px;
+  font-size: clamp(15px, 2.5vw, 18px);
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.8; /* texto com espaco pra respirar */
 }
 
-/* projetos meus */
+/* PROJETOS — grid que se organiza sozinho conforme o espaco disponivel */
 .projetos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
+  display: grid;
+  /* auto-fit + minmax = 3 colunas no pc, 2 no tablet, 1 no celular — sem @media */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
 }
 
-/* carts nao mexer */
+/* o card em si — e uma ancora (link) estilizada como bloco */
 .card {
-    background: #2B124C;
-    padding: 30px;
-    border-radius: 15px;
-    width: 280px;
-    text-decoration: none;
-    color: #FBE4D8;
-    border: 1px solid #522B5B;
-    transition: all 0.3s ease;
+  background: var(--bg-card);
+  padding: clamp(20px, 4vw, 30px);
+  border-radius: var(--radius);
+  text-decoration: none; /* remove sublinhado do link */
+  color: var(--text);
+  border: 1px solid var(--border);
+  /* lista todas as propriedades que vao animar — mais performatico que "all" */
+  transition: transform var(--transition), background var(--transition),
+              border-color var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-icon {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 4px;
 }
 
 .card h3 {
-    margin-bottom: 10px;
+  font-size: clamp(15px, 2.5vw, 18px);
+  font-weight: 700;
 }
 
+.card p {
+  font-size: clamp(13px, 2vw, 15px);
+  color: var(--text-muted);
+  flex: 1; /* empurra a tag pra baixo */
+}
+
+/* tagzinha de tecnologia no card */
+.card-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-light);
+  background: rgba(133, 79, 108, 0.2);
+  border: 1px solid rgba(133, 79, 108, 0.4);
+  padding: 3px 10px;
+  border-radius: 6px;
+  align-self: flex-start; /* nao estica a tag ate a borda */
+  margin-top: 4px;
+}
+
+/* efeito hover do card — levanta e muda de cor */
 .card:hover {
-    transform: translateY(-10px);
-    background: #522B5B;
-    border-color: #854F6C;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transform: translateY(-6px); /* sobe 6px */
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); /* sombra dramatica */
 }
 
-/* footer */
+/* FOOTER — parte de contato, simples e funcional */
 footer {
-    background: #2B124C;
-    color: #FBE4D8;
-    text-align: center;
-    padding: 50px 20px;
-    margin-top: 40px;
+  /* gradiente que vem do nada  */
+  background: linear-gradient(180deg, transparent 0%, #2B124C 40%);
+  text-align: center;
+  padding: clamp(40px, 8vw, 70px) clamp(16px, 5vw, 40px);
+  margin-top: 20px;
 }
 
-footer p {
-    margin: 8px 0;
+footer h2 {
+  justify-content: center;
+  margin-bottom: 36px;
+  font-size: clamp(20px, 4vw, 28px);
 }
 
-footer a {
-    color: #FBE4D8;
-    text-decoration: none;
-    transition: 0.3s;
+/* o footer nao precisa da linha decorativa, entao desliga o ::after */
+footer h2::after {
+  display: none;
 }
 
-footer a:hover {
-    color: #DFB6B2;
+/* grid dos botoes de contato */
+.contato-grid {
+  display: flex;
+  flex-wrap: wrap; /* quebra linha se necessario */
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 36px;
 }
 
-.social-icons {
-    margin-top: 15px;
+/* cada item de contato — pill clicavel */
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  background: rgba(43, 18, 76, 0.6);
+  border: 1px solid var(--border);
+  padding: 12px 20px;
+  border-radius: 100px;
+  font-size: clamp(13px, 2.5vw, 15px);
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
 }
 
-.social-icons a {
-    display: inline-block;
-    margin: 10px;
-    font-weight: 500;
-    font-size: 18px;
+.contato-item i {
+  font-size: 16px;
+  color: var(--accent-light);
 }
 
-/* responsividade */
-@media (max-width: 768px) {
-    header {
-        padding: 40px 15px;
-    }
+.contato-item:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+  color: var(--accent-light);
+}
 
-    header h1 {
-        font-size: 28px;
-    }
+/* copyright la embaixo de tudo */
+.copyright {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
 
-    header p {
-        font-size: 15px;
-    }
+/* RESPONSIVO — so precisa de um @media pra tela muito pequena porque o clamp ja resolve o resto */
+@media (max-width: 400px) {
+  .projetos {
+    grid-template-columns: 1fr; /* uma coluna so, nao tem espaco pra mais */
+  }
 
-    section {
-        padding: 40px 15px;
-    }
-
-    .sobre p {
-        font-size: 16px;
-    }
-
-    .projetos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-        padding: 20px;
-    }
-
-    footer {
-        padding: 30px 15px;
-    }
+  .contato-item span {
+    font-size: 12px; /* texto menor nos botoes de contato */
+  }
 }
