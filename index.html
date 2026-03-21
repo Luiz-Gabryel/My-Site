@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luiz Gabryel | Portfólio</title>
-<link rel="stylesheet" href="/style.css">
-<!-- iscones -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luiz Gabryel | Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-<h1>Luiz Gabryel</h1>
-<p>Estudante de Desenvolvimento de Sistemas</p>
-</header>
-<section class="sobre">
-<h2>Sobre Mim</h2>
-<p>
-            Sou estudante de TI.<br>
-            Atualmente estudo Python.
-</p>
-</section>
-<section class="projetos">
-<h2>Projetos</h2>
-<a class="card" href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema/tree/main/luiz-gabryel/curso-tecnico/python/desafios/controle-estoque" target="_blank">
-<h3>📚 Controle de Estoque</h3>
-<p>Sistema em Python para controle de livros.</p>
-</a>
-<a class="card" href="https://luiz-gabryel.vercel.app/" target="_blank">
-<h3>🌐 Portfólio</h3>
-<p>Site pessoal desenvolvido com HTML e CSS.</p>
-</a>
-<a class="card" href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema" target="_blank">
-<h3>💻 Repositório do Curso</h3>
-<p>Todos os exercícios e desafios do curso técnico.</p>
-</a>
-</section>
-<footer id="contato">
-<h2>Entre em Contato</h2>
-<p>Telefone: <a href="tel:+5511989017556">(11) 98901-7556</a></p>
-<p>Email: <a href="mailto:luizgabryel515@gmail.com">luizgabryel515@gmail.com</a></p>
-<div class="social-icons">
-<a href="https://github.com/luiz-gabryel" target="_blank">
-<i class="fab fa-github"></i> GitHub
-</a>
-</div>
-<p style="margin-top:20px;">© 2026 - Luiz Gabryel</p>
-</footer>
+
+  <header>
+    <div class="header-inner">
+      <div class="header-badge">Disponível para projetos</div>
+      <h1>Luiz Gabryel</h1>
+      <p>Estudante de Desenvolvimento de Sistemas</p>
+      <div class="header-tags">
+        <span>Python</span>
+        <span>HTML & CSS</span>
+        <span>GitHub</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="sobre">
+      <h2>Sobre Mim</h2>
+      <p>
+        Sou estudante de TI com foco em desenvolvimento de sistemas.<br>
+        Atualmente estudo Python e construo projetos práticos para melhorar meu aprendizado.
+      </p>
+    </section>
+
+    <section class="projetos-section">
+      <h2>Projetos</h2>
+      <div class="projetos">
+        <a class="card" href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema/tree/main/luiz-gabryel/curso-tecnico/python/desafios/controle-estoque" target="_blank" rel="noopener">
+          <div class="card-icon">📚</div>
+          <h3>Controle de Estoque</h3>
+          <p>Sistema em Python para controle de livros.</p>
+          <span class="card-tag">Python</span>
+        </a>
+        <a class="card" href="https://luiz-gabryel.vercel.app/" target="_blank" rel="noopener">
+          <div class="card-icon">🌐</div>
+          <h3>Portfólio</h3>
+          <p>Site pessoal desenvolvido com HTML e CSS.</p>
+          <span class="card-tag">HTML · CSS</span>
+        </a>
+        <a class="card" href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema" target="_blank" rel="noopener">
+          <div class="card-icon">💻</div>
+          <h3>Repositório do Curso</h3>
+          <p>Todos os exercícios e desafios do curso técnico.</p>
+          <span class="card-tag">GitHub</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <h2>Entre em Contato</h2>
+    <div class="contato-grid">
+      <a href="tel:+5511989017556" class="contato-item">
+        <i class="fas fa-phone"></i>
+        <span>(11) 98901-7556</span>
+      </a>
+      <a href="mailto:luizgabryel515@gmail.com" class="contato-item">
+        <i class="fas fa-envelope"></i>
+        <span>luizgabryel515@gmail.com</span>
+      </a>
+      <a href="https://github.com/luiz-gabryel" target="_blank" rel="noopener" class="contato-item">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
+    </div>
+    <p class="copyright">© 2026 — Luiz Gabryel</p>
+  </footer>
+
 </body>
 </html>
