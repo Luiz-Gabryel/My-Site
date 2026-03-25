@@ -7,7 +7,7 @@ const botaoCurti = document.querySelector("#botao-curti");
 //2 ação (funcao)
 function transformarPagina(){
     titulo.innerText = 'Voce clicou e transformou nossa pagina' // testa se muda o texto
-    titulo.computedStyleMap.color = "FFD700"; // vai pra dourado
+    titulo.computedStyleMap.color = "FFD700"; // vai pra douradoS
     document.body.style.backgroundColor = "#0000FF" //azul
 }
 
@@ -24,4 +24,4 @@ function curtir(){
 //3 se o botao aperta ele muda nossa cor do transformarPagina
 botaoMudar.onclick = transformarPagina;
 botaoVoltar.onclick = voltarPagina;
-botaoCurti.onclick = curtir
+botaoCurti.onclick = curtir;
