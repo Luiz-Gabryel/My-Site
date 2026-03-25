@@ -76,4 +76,6 @@ p {
     flex-direction: row; /* lado a lado */
     gap: 16px;
     flex-wrap: wrap; /* quebra linha se nao couber */
+    width: 200px;
+
 }
