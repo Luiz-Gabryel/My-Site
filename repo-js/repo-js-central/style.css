@@ -58,7 +58,7 @@ p {
   border: 1px solid var(--border);
   /* lista todas as propriedades que vao animar — mais performatico que "all" */
   transition: transform var(--transition), background var(--transition),
-              border-color var(--transition), box-shadow var(--transition);
+  border-color var(--transition), box-shadow var(--transition);
   font-family: var(--font-mono);
   font-size: 14px;
 }
