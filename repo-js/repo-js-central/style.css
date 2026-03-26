@@ -53,14 +53,16 @@ p {
   background: var(--bg-card);
   padding: 20px 30px;
   border-radius: var(--radius);
-  text-decoration: none; /* remove sublinhado do link */
+  text-decoration: none;
   color: var(--text);
   border: 1px solid var(--border);
-  /* lista todas as propriedades que vao animar — mais performatico que "all" */
   transition: transform var(--transition), background var(--transition),
-  border-color var(--transition), box-shadow var(--transition);
+              border-color var(--transition), box-shadow var(--transition);
   font-family: var(--font-mono);
   font-size: 14px;
+  min-width: 200px;
+  flex: 1;
+  max-width: 300px;
 }
 
 /* efeito hover do card — levanta e muda de cor */
@@ -73,9 +75,10 @@ p {
 
 .aulas {
     display: flex;
-    flex-direction: row; /* lado a lado */
+    flex-direction: row;
     gap: 16px;
-    flex-wrap: wrap; /* quebra linha se nao couber */
-    width: 200px;
-
+    flex-wrap: wrap;
+    justify-content: center; /* centraliza os cards */
+    max-width: 1100px;       /* limite igual o portfólio */
+    width: 100%;             /* ocupa o espaço disponível */
 }
