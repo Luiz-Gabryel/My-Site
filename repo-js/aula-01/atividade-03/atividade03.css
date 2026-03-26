@@ -13,12 +13,3 @@ body {
     border: 10px solid rgb(119, 255, 0) ;
     color: red;
 }
-
-button {
-    padding: 10px 20px;
-    background-color: blueviolet;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
