@@ -7,21 +7,34 @@ Site pessoal e repositório de estudos de desenvolvimento de sistemas.
 ---
 
 ## 📁 Estrutura do Projeto
-
 ```
 my-site/
-├── index.html              # Página principal do portfólio
+├── index.html
 ├── css/
-│   └── style.css           # Estilização global
-└── repo-js/                # Repositório de aulas de JavaScript (em desenvolvimento)
-    ├── repo-js-central/    # Página central com navegação entre aulas
+│   └── style.css
+├── em-manutencao/
+│   ├── index.html
+│   └── style.css
+└── repo-js/
+    ├── repo-js-central/
     │   ├── index.html
     │   ├── script.js
     │   └── style.css
-    └── aula-01/            # Primeira aula — Manipulação de DOM
+    └── aula-01/
         ├── index.html
-        ├── script.js
-        └── style.css
+        ├── style.css
+        ├── atividade-01/
+        │   ├── atividade01.html
+        │   ├── atividade01.css
+        │   └── atividade01.js
+        ├── atividade-02/
+        │   ├── atividade02.html
+        │   ├── atividade02.css
+        │   └── atividade02.js
+        └── atividade-03 até atividade-18/
+            ├── atividadeXX.html
+            ├── atividadeXX.css
+            └── atividadeXX.js
 ```
 
 ---
@@ -55,8 +68,14 @@ Repositório de exercícios e atividades práticas das aulas de JavaScript do cu
 |------|----------|--------|
 | Aula 01 | Manipulação de DOM | 🔧 Em progresso |
 
-**Escola:** Bonifácio de Carvalho Coronel  
-**Auxio-Professor:** Wanderlei  
+| Atividade | Conteúdo | Status |
+|-----------|----------|--------|
+| 01 | Manipulação de DOM | ✅ Concluída |
+| 02 | Orçamento Simples | ✅ Concluída |
+| 03 a 18 | Lista de exercícios | ⏳ Em desenvolvimento |
+
+**Escola:** Bonifácio de Carvalho Coronel
+**Professor:** Wanderlei
 **Turma:** 2DS
 
 ---
