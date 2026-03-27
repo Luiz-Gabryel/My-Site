@@ -3,3 +3,5 @@
     const soma = valorPeca + valorMaoDeObra
 
     alert(`O valor total ficou ${soma}`)
+    console.log(`Valor Ficou: ${soma}`);
+
