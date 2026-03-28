@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📚 Controle de Estoque de Livros</h1>
+
+        <!-- Lista de livros -->
+        <section>
+            <h2>Livros cadastrados</h2>
+            <button onclick="carregarLivros()">Atualizar lista</button>
+            <ul id="lista-livros"></ul>
+        </section>
+
+        <!-- Adicionar livro -->
+        <section>
+            <h2>Adicionar livro</h2>
+            <input type="text" id="nome-livro" placeholder="Nome do livro">
+            <input type="number" id="qtd-livro" placeholder="Quantidade">
+            <button onclick="adicionarLivro()">Adicionar</button>
+        </section>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
