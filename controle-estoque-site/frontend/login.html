@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Controle de Estoque</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📚 Controle de Estoque de Livros</h1>
+        <h2>Seja Bem-Vindo</h2>
+
+        <div id="form-login">
+            <h3>Login</h3>
+            <input type="text" id="usuario" placeholder="Usuário">
+            <input type="password" id="senha" placeholder="Senha">
+            <button onclick="fazerLogin()">Entrar</button>
+            <p>Não tem conta? <a href="#" onclick="mostrarCadastro()">Criar conta</a></p>
+        </div>
+
+        <div id="form-cadastro" style="display:none">
+            <h3>Criar Conta</h3>
+            <input type="text" id="novo-usuario" placeholder="Usuário">
+            <input type="password" id="nova-senha" placeholder="Senha">
+            <button onclick="fazerCadastro()">Cadastrar</button>
+            <p>Já tem conta? <a href="#" onclick="mostrarLogin()">Login</a></p>
+        </div>
+    </div>
+
+    <script src="./login.js"></script>
+</body>
+</html>

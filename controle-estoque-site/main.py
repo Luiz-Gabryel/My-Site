@@ -2,6 +2,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import get_db, Livro, Usuario
+import bcrypt
 
 app = FastAPI()
 
@@ -12,9 +13,32 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+def hash_senha(senha: str) -> str:
+    return bcrypt.hashpw(senha.encode(), bcrypt.gensalt()).decode()
+
+def verificar_senha(senha: str, hash: str) -> bool:
+    return bcrypt.checkpw(senha.encode(), hash.encode())
+
 @app.get("/")
 def inicio():
     return {"mensagem": "API funcionando"}
+
+@app.post("/cadastro")
+def cadastro(usuario: str, senha: str, db: Session = Depends(get_db)):
+    existe = db.query(Usuario).filter(Usuario.usuario == usuario).first()
+    if existe:
+        raise HTTPException(status_code=400, detail="Usuário já existe")
+    novo = Usuario(usuario=usuario, senha=hash_senha(senha))
+    db.add(novo)
+    db.commit()
+    return {"mensagem": f"Usuário {usuario} criado com sucesso"}
+
+@app.post("/login")
+def login(usuario: str, senha: str, db: Session = Depends(get_db)):
+    user = db.query(Usuario).filter(Usuario.usuario == usuario).first()
+    if not user or not verificar_senha(senha, user.senha):
+        raise HTTPException(status_code=401, detail="Usuário ou senha incorretos")
+    return {"mensagem": f"Bem vindo, {usuario}", "usuario": usuario}
 
 @app.get("/livros")
 def ver_livros(db: Session = Depends(get_db)):
