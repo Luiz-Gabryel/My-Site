@@ -1,3 +1,9 @@
+const usuario = localStorage.getItem("usuario")
+if (!usuario) {
+    window.location.href = "./login.html"
+}
+
+
 const API = "https://estoque-livro-api.onrender.com"
 
 async function carregarLivros() {
