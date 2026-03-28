@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000"
+const API = "https://estoque-livro-api.onrender.com"
 
 async function carregarLivros() {
     const response = await fetch(`${API}/livros`)
