@@ -4,9 +4,11 @@ background-color: rgb(140, 33, 197);
 
 h1{
 text-align-last: center;
+color: brown;
 }
 
 form{
 text-align: center;
 background-color: aquamarine;
+color: red
 }
