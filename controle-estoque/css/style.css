@@ -1,22 +1,27 @@
 body{
-background-color: rgb(140, 33, 197);
-}
-
-h1{
-text-align-last: center;
-color: brown;
-}
-
-form{
-text-align: center;
-background-color: aquamarine;
-color: red
+    background-color: #190019; /* fundo da minha pagina */
+    color: #DFB6B2;            /* cor do meu texto - rosa clarinho */
+    font-family: 'space mono'; /* fonte de gente sem futuro */
+    text-align: center;        /* Deus, pfvr centralize */
+    display: flex;             /* flexbox */
+    align-items: center;       /* centraliza vertical */
+    justify-content: center;   /* centraliza horizontal */
+    height: 60vh;              /* altura dele */
 }
 
 div{
-align-items: self-end;
+    background-color: #2B124C; /* fundo da div - roxo menos escuro */
+    margin: auto;              /* centralização */
+    max-width: 400px;          /* largura máxima da div */
+    border-radius: 15px; /*bordas*/
 }
 
-img{
+button{
+background-color: #53278e;
+border-radius: 8px;
+}
 
+input{
+    width: 100%;               /* input da mesma empessura */
+    box-sizing: border-box; /*largura*/
 }
