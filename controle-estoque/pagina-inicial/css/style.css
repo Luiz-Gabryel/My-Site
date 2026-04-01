@@ -1,7 +1,67 @@
-.container {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    position: absolute;
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.menu {
+    width: 220px;
+    background-color: #222;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu h2 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.menu a:hover {
+    background-color: #444;
+    color: #fff;
+}
+.menu .sair {
+    margin-top: auto;
+    color: #888;
+}
+
+.menu .sair:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.conteudo {
+    padding: 40px;
+    flex: 1;
+}
+
+.usuario {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 22px;
+    color: #222;
+}
+
+

@@ -1,6 +1,6 @@
 body {
     font-family: 'Space Mono', monospace;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,22 +8,84 @@ body {
     margin: 0;
 }
 
-.criar{
-    background-color: #2B124C; 
-    margin: auto;              
-    max-width: 400px;       
-    border-radius: 15px; 
+.card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    color: #222;
+}
+
+p {
+    margin: 0 0 24px 0;
+    font-size: 13px;
+    color: #888;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 4px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: #222;
+}
+
+input:focus {
+    outline: none;
+    border-color: #aaa;
 }
 
 button {
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #222;
+    color: #fff;
     cursor: pointer;
     font-weight: bold;
     font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    margin-top: 4px;
 }
 
-input{
-    width: 100%;               
-    box-sizing: border-box; 
+button:hover {
+    background-color: #444;
+}
+
+.voltar {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    color: #222;
 }

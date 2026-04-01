@@ -37,8 +37,11 @@ button {
     border: none;
 }
 
-.btn-create {
+/*.btn-create {
     background-color: #fff;
     color: #000;
     border: 1px solid #ccc;
 }
+
+<button type="button" class="btn-create"onclick="location.href='./criar-conta/criar.html'">Criar Conta</button>
+*/

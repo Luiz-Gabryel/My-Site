@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./img/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-    <title>Controle de Estoque</title>
+    <title>Login</title>
 </head>
 <body>
-    <div class="login">
-    <h1>Login</h1>
-    <form>
-        <label>User:</label>
-        <input type="text"><br>
-        <label>Password:</label>
-        <input type="password"><br>
-        <a class="esqueci-senha" href="../esqueci-senha/esqueci.html">Esqueci minha senha</a>
-        <br>
-        <button type="button" onclick="window.location.href='../pagina-inicial/pagina-inicial.html'">Login</button>
-    </form>
-</div>
-    
 
-<script src="script.js"></script>
+    <div class="card">
+        <h2>Login</h2>
+        <p>Entre com sua conta para continuar.</p>
+
+        <form>
+            <div>
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Seu nome de usuário" required>
+            </div>
+
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+            </div>
+
+            <a class="esqueci" href="../esqueci-senha/esqueci.html">Esqueci minha senha</a>
+
+            <a href="../pagina-inicial/pagina-inicial.html">
+                <button type="button">Entrar</button>
+            </a>
+        </form>
+
+        <a class="voltar" href="../index.html">← Voltar</a>
+    </div>
+
 </body>
 </html>
-
