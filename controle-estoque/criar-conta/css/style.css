@@ -1,27 +1,29 @@
-body{
-    background-color: #190019; /* fundo da minha pagina */
-    color: #DFB6B2;            /* cor do meu texto - rosa clarinho */
-    font-family: 'space mono'; /* fonte de gente sem futuro */
-    text-align: center;        /* Deus, pfvr centralize */
-    display: flex;             /* flexbox */
-    align-items: center;       /* centraliza vertical */
-    justify-content: center;   /* centraliza horizontal */
-    height: 60vh;              /* altura dele */
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.login{
-    background-color: #2B124C; /* fundo da div - roxo menos escuro */
-    margin: auto;              /* centralização */
-    max-width: 400px;          /* largura máxima da div */
-    border-radius: 15px; /*bordas*/
+.criar{
+    background-color: #2B124C; 
+    margin: auto;              
+    max-width: 400px;       
+    border-radius: 15px; 
 }
 
-button{
-background-color: #53278e;
-border-radius: 8px;
+button {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
 }
 
 input{
-    width: 100%;               /* input da mesma empessura */
-    box-sizing: border-box; /*largura*/
+    width: 100%;               
+    box-sizing: border-box; 
 }
