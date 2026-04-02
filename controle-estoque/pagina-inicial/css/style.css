@@ -51,6 +51,9 @@ body {
 .conteudo {
     padding: 40px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
 }
 
 .usuario {
@@ -64,4 +67,79 @@ h1 {
     color: #222;
 }
 
+.livro, .config {
+    display: flex;
+    flex-direction: column;
+}
 
+.submenu {
+    display: none;
+    background-color: #333; 
+    margin-left: 10px;      
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.submenu a {
+    font-size: 13px;
+    color: #aaa;
+    padding: 8px 15px;
+}
+
+/* mouse sobre o container */
+.livro:hover .submenu, 
+.config:hover .submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pequeno ajuste pra nao bugar o submenu aberto */
+.livro:hover > a, 
+.config:hover > a {
+    background-color: #444;
+    color: #fff;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.parent h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.parent ul {
+    list-style: none; 
+}
+
+.parent li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.div1, .div2, .div3 {
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 250px; 
+}
+    
+.div1 {
+    grid-column: span 2;
+    background-color: #7fff00; 
+}
+
+.div2 {
+    grid-column: span 2;
+    background-color: #ffff0e; 
+
+.div3 {
+    grid-column: span 1;
+    background-color: #d40000;
+}
