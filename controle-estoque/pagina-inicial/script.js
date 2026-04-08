@@ -21,6 +21,6 @@ function abrirMenu(){
         botao.textContent = '≡';
     } else {
         menu.classList.add('aberto');
-        botao.textContent = 'X';
+        botao.textContent = '✕';
     }
 }

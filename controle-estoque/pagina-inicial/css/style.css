@@ -46,14 +46,6 @@ body {
 }
 
 /* ===== MENU LATERAL ===== */
-.menu {
-    width: 220px;
-    background-color: var(--bg-menu);
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
 .menu h2 {
     color: #fff;
@@ -240,8 +232,18 @@ body {
 }
 
 /* ===== MENU LATERAL - ESCONDIDO ===== */
-.menu{
-    display: none;
+.menu {
+    width: 220px;
+    background-color: var(--bg-menu);
+    padding: 60px 20px 30px 20px;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    left: -220px;
+    height: 100vh;
+    transition: left 0.3s;
+    display: flex;
 }
 
 #btn-menu {
@@ -260,4 +262,10 @@ body {
 
 .menu.aberto {
     display: flex;
+    left: 0;
+}
+
+.menu.aberto ~ .container {
+    margin-left: 220px;
+    transition: margin-left 0.3s;
 }
