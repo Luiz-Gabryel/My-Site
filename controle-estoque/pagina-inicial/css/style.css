@@ -1,19 +1,54 @@
+/* ===== TEMA CLARO ===== */
+:root[data-theme="claro"] {
+    --bg-body: #f4f4f4;
+    --bg-container: #ffffff;
+    --bg-menu: #222;
+    --bg-submenu: #333;
+    --bg-card-1: #e8e8e8;
+    --bg-card-2: #e0e0e0;
+    --bg-card-3: #d8d8d8;
+    --text-principal: #222;
+    --text-secundario: #888;
+    --text-menu: #ccc;
+    --text-submenu: #aaa;
+    --borda: #ddd;
+}
+
+/* ===== TEMA ESCURO ===== */
+:root[data-theme="escuro"] {
+    --bg-body: #1a1a1a;
+    --bg-container: #242424;
+    --bg-menu: #111;
+    --bg-submenu: #1e1e1e;
+    --bg-card-1: #2a2a2a;
+    --bg-card-2: #2e2e2e;
+    --bg-card-3: #323232;
+    --text-principal: #f0f0f0;
+    --text-secundario: #888;
+    --text-menu: #aaa;
+    --text-submenu: #777;
+    --borda: #333;
+}
+
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===== BODY ===== */
 body {
     font-family: 'Space Mono', monospace;
     display: flex;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: var(--bg-body);
 }
 
+/* ===== MENU LATERAL ===== */
 .menu {
     width: 220px;
-    background-color: #222;
+    background-color: var(--bg-menu);
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
@@ -26,192 +61,184 @@ body {
     margin-bottom: 20px;
 }
 
+/* ===== MENU LATERAL - LINKS ===== */
 .menu a {
-    color: #ccc;
+    color: var(--text-menu);
     text-decoration: none;
     font-size: 14px;
     padding: 10px;
     border-radius: 6px;
+    display: block;
 }
 
 .menu a:hover {
     background-color: #444;
     color: #fff;
 }
-.menu .sair {
-    margin-top: auto;
-    color: #888;
+
+/* ===== MENU LATERAL - SUBMENU ===== */
+.submenu {
+    display: none;
+    background-color: var(--bg-submenu);
+    margin-left: 10px;
+    border-radius: 6px;
+    margin-top: 5px;
 }
 
-.menu .sair:hover {
+.submenu a {
+    font-size: 13px;
+    color: var(--text-submenu);
+    padding: 8px 15px;
+}
+
+/* ===== MENU LATERAL - HOVER ===== */
+.livro, .config, .perfil {
+    display: flex;
+    flex-direction: column;
+}
+
+.livro:hover .submenu,
+.config:hover .submenu,
+.perfil:hover .submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.livro:hover > a,
+.config:hover > a,
+.perfil:hover > a {
     background-color: #444;
     color: #fff;
 }
 
+/* ===== MENU LATERAL - SAIR ===== */
+.sair {
+    margin-top: auto;
+    color: #e55 !important;
+}
+
+.sair:hover {
+    color: #fff !important;
+    background-color: #444;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
 .container {
     padding: 40px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: 20px;
+    background-color: var(--bg-container);
 }
 
-.usuario {
-    font-size: 13px;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-h1 {
-    font-size: 22px;
-    color: #222;
-}
-
-.livro, .config {
+/* ===== TOPO ===== */
+.topo {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--borda);
 }
 
-.submenu {
-    display: none;
-    background-color: #333; 
-    margin-left: 10px;      
-    border-radius: 6px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.submenu a {
-    font-size: 13px;
-    color: #aaa;
-    padding: 8px 15px;
-}
-
-/* mouse sobre o container */
-.livro:hover .submenu, 
-.config:hover .submenu {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Pequeno ajuste pra nao bugar o submenu aberto */
-.livro:hover > a, 
-.config:hover > a {
-    background-color: #444;
-    color: #fff;
-}
-
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    width: 100%;
-}
-
-.parent h3 {
-    font-size: 16px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.parent ul {
-    list-style: none; 
-}
-
-.parent li {
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-.total-livro, .ultimos-vendidos, .melhores-vendedores {
-    padding: 20px;
-    border-radius: 8px;
-    min-height: 250px; 
-}
-    
-.total-livro {
-    grid-column: span 2;
-    background-color: #7fff00; 
-}
-
-.ultimos-vendidos {
-    grid-column: span 2;
-    background-color: #ffff0e; 
-}
-.melhores-vendedores {
-    grid-column: span 1;
-    background-color: #d40000;
-}
-
-.topo{
-display: flex;
-flex-direction: column;
-gap: 5px;
-padding-bottom: 20px;
-margin-bottom: 20px;
-border-bottom: 1px solid #222;
-position: relative;
-width: 100%;
-}
-
-.topo h1 {
+.topo-texto h1 {
     font-size: 22px;
-    margin: 0;
+    color: var(--text-principal);
 }
 
-.topo .usuario {
+.topo-texto p {
     font-size: 13px;
-    color: #888;
-    margin: 0;
+    color: var(--text-secundario);
 }
 
-.perfil {
-    position: absolute;
-    right: 0;               
-    top: 10px;              
+/* ===== TOPO - BOTAO TEMA ===== */
+.toggle-tema {
     padding: 8px 15px;
-    background-color: #222;
+    background-color: var(--bg-menu);
     color: #fff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-family: 'Space Mono', monospace;
+    font-size: 13px;
 }
 
-.perfil-container{
-background-color: #7fff00;
-position: relative;
-display: inline-block;
+.toggle-tema:hover {
+    background-color: #444;
 }
 
-.submenu-perfil {
-    display: none;
-    position: absolute;
-    right: 0; 
-    background-color: #f9f9f9;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 4px;
+/* ===== CARDS ===== */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
 }
 
-.submenu-perfil a {
-    color: black;
-    padding: 12px 16px;
+.parent h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text-principal);
+}
+
+.parent ul {
+    list-style: none;
+}
+
+.parent li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-principal);
+}
+
+/* ===== CARD TOTAL DE LIVROS ===== */
+.total-livro {
+    grid-column: span 2;
+    background-color: var(--bg-card-1);
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 250px;
+}
+
+/* ===== CARD ULTIMOS COMPRADOS ===== */
+.ultimos-vendidos {
+    grid-column: span 2;
+    background-color: var(--bg-card-2);
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 250px;
+}
+
+/* ===== CARD MELHORES VENDEDORES ===== */
+.melhores-vendedores {
+    grid-column: span 1;
+    background-color: var(--bg-card-3);
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 250px;
+}
+
+.melhores-vendedores li {
+    margin-bottom: 14px;
+}
+
+.melhores-vendedores span {
+    display: block;
+    font-size: 13px;
+    color: var(--text-principal);
+}
+
+/* ===== LINK MAIS ===== */
+.livros-mais {
+    font-size: 12px;
+    color: var(--text-secundario);
     text-decoration: none;
-    display: block;
 }
 
-.submenu-perfil a:hover {
-    background-color: #ddd;
+.livros-mais:hover {
+    color: var(--text-principal);
 }
 
-.perfil-container:hover .submenu-perfil {
-    display: block;
-}
+/* ===== MENU LATERAL - ESCONDIDO ===== */
+.menu{
 
-.btn-sair {
-    color: red !important;
-    font-weight: bold;
 }

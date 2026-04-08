@@ -1,92 +1,102 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/style.css">
-        <title>Pagina Inicial</title>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="claro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Pagina Inicial</title>
+</head>
+<body>
 
-    <div class="menu">
-        <h2>Menu</h2>
+<button id="btn-menu" onclick="abrirMenu()">&#9776;</button>
 
-        <div class="livro">
-            <a href="#">Livros</a>
-            <div class="submenu">
-                <a href="#">Adicionar</a>
-                <a href="#">Ver</a>
-                <a href="#">Retirar</a>
-                <a href="#">Procurar</a>
-            </div>
-        </div>
+<div class="menu" id="menu">
+    <h2>Menu</h2>
 
-        <div class="config">
-            <a href="#">Configurações</a>
-            <div class="submenu">
-                <a href="#">Mudar Tema</a>
-                <a href="#">Criar Usuário</a>
-                <a href="#">Apagar Usuário</a>
-            </div>
+    <div class="livro">
+        <a href="#">Livros</a>
+        <div class="submenu">
+            <a href="#">Adicionar</a>
+            <a href="#">Ver</a>
+            <a href="#">Retirar</a>
+            <a href="#">Procurar</a>
         </div>
     </div>
 
-    <div class="container">
-        
-        <div class="topo">
+    <div class="perfil">
+        <a href="#">Perfil</a>
+        <div class="submenu">
+            <a href="#">Meus Dados</a>
+            <a href="#">Configurações</a>
+        </div>
+    </div>
+
+    <div class="config">
+        <a href="#">Configurações</a>
+        <div class="submenu">
+            <a href="#">Mudar Tema</a>
+            <a href="#">Criar Usuário</a>
+            <a href="#">Apagar Usuário</a>
+        </div>
+    </div>
+
+    <a href="../index.html" class="sair">Sair</a>
+</div>
+
+<div class="container">
+
+    <div class="topo">
+        <div class="topo-texto">
             <h1>Bem-vindo ao Estoque Livro</h1>
             <p class="usuario">Olá, #usuario</p>
-            
-            <div class="perfil-container">
-                <button class="perfil">Perfil</button>
-                <div class="submenu-perfil">
-                    <a href="#">Meus Dados</a>
-                    <a href="#">Configurações</a>
-                    <hr>
-                    <a href="../index.html" class="btn-sair">Sair</a>
-                </div>
-            </div>
         </div>
-
-
-        <div class="parent">
-
-            <div class="total-livro">
-                <h3>Total de Livros</h3>
-                <ul>
-                    <li class="primeiro">Nome: xxxxxxxxx</li>
-                    <li class="segundo">Nome: xxxxxxxxx</li>
-                    <li class="terceiro">Nome: xxxxxxxxx</li>
-                    <a class="livros+">Mais...</a>
-                </ul>
-            </div>
-
-            <div class="ultimos-vendidos">
-                <h3>Últimos livros comprados</h3>
-                <ul>
-                    <li class="primeiro">Nome: xxxxxxxxx</li>
-                    <li class="segundo">Nome: xxxxxxxxx</li>
-                    <li class="terceiro">Nome: xxxxxxxxx</li>
-                    <a class="livros+">Mais...</a>
-                </ul>
-            </div>
-
-            <div class="melhores-vendedores">
-                <h3>Melhores Vendedor</h3>
-                <ul>
-                    <li class="terceiro">Nome: xxxxxxxxx</li>
-                        <li>Livros Vendidos: xxx</li>
-                    <li class="primeiro">Nome: xxxxxxxxx</li>
-                        <li>Livros Vendidos: xxx</li>
-                    <li class="segundo">Nome: xxxxxxxxx</li>
-                        <li>Livros Vendidos: xxx</li>   
-                    <li class="terceiro">Nome: xxxxxxxxx</li>
-                        <li>Livros Vendidos: xxx</li>
-                </ul>
-            </div>
-        </div>
+        <button class="toggle-tema" onclick="alternarTema()">Escuro</button>
     </div>
 
-    </body>
-    </html>
+    <div class="parent">
+
+        <div class="total-livro">
+            <h3>Total de Livros</h3>
+            <ul>
+                <li class="primeiro">Nome: xxxxxxxxx</li>
+                <li class="segundo">Nome: xxxxxxxxx</li>
+                <li class="terceiro">Nome: xxxxxxxxx</li>
+                <li><a href="#" class="livros-mais">Mais...</a></li>
+            </ul>
+        </div>
+
+        <div class="ultimos-vendidos">
+            <h3>Últimos livros comprados</h3>
+            <ul>
+                <li class="primeiro">Nome: xxxxxxxxx</li>
+                <li class="segundo">Nome: xxxxxxxxx</li>
+                <li class="terceiro">Nome: xxxxxxxxx</li>
+                <li><a href="#" class="livros-mais">Mais...</a></li>
+            </ul>
+        </div>
+
+        <div class="melhores-vendedores">
+            <h3>Melhores Vendedores</h3>
+            <ul>
+                <li class="primeiro">
+                    <span>Nome: xxxxxxxxx</span>
+                    <span>Livros Vendidos: xxx</span>
+                </li>
+                <li class="segundo">
+                    <span>Nome: xxxxxxxxx</span>
+                    <span>Livros Vendidos: xxx</span>
+                </li>
+                <li class="terceiro">
+                    <span>Nome: xxxxxxxxx</span>
+                    <span>Livros Vendidos: xxx</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
