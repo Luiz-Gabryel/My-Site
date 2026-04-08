@@ -240,5 +240,22 @@ body {
 
 /* ===== MENU LATERAL - ESCONDIDO ===== */
 .menu{
+    display: none;
+}
+
+#btn-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu.aberto {
 
 }
