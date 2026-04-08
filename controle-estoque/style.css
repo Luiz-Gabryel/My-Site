@@ -1,3 +1,5 @@
+/*==================== RESET & BASE ====================*/
+/* Corpo da página de entrada: centraliza o conteúdo na tela */
 body {
     font-family: 'Space Mono', monospace;
     background-color: #ffffff;
@@ -8,11 +10,15 @@ body {
     margin: 0;
 }
 
+/*==================== LAYOUT DA CAIXA DE LOGIN ====================*/
+/* Container central com título e botão de acesso */
 .login-box {
     text-align: center;
     width: 350px;
 }
 
+/*==================== TIPOGRAFIA ====================*/
+/* Estilos de título e subtítulo da tela inicial */
 h1 {
     font-size: 24px;
     margin-bottom: 5px;
@@ -23,6 +29,8 @@ p {
     margin-bottom: 30px;
 }
 
+/*==================== BOTÃO ====================*/
+/* Estilo base compartilhado por todos os botões da página */
 button {
     padding: 12px;
     border-radius: 8px;
@@ -31,12 +39,15 @@ button {
     font-family: 'Space Mono', monospace;
 }
 
+/* Botão principal de acesso ao login */
 .btn-login {
     background-color: #000;
     color: #fff;
     border: none;
 }
 
+/*====================  DESATIVADO ====================*/
+/* Botão de criar conta reutilização */
 /*.btn-create {
     background-color: #fff;
     color: #000;
