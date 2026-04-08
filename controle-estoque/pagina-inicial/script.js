@@ -11,3 +11,16 @@ function alternarTema() {
         document.querySelector('.toggle-tema').textContent = 'Escuro';
     }
 }
+
+function abrirMenu(){
+    var menu = document.getElementById('menu')
+    var botao = document.getElementById('btn-menu')
+
+    if (menu.classList.contains('aberto')){
+        menu.classList.remove('aberto');
+        botao.textContent = '≡';
+    } else {
+        menu.classList.add('aberto');
+        botao.textContent = 'X';
+    }
+}
