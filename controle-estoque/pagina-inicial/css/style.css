@@ -257,5 +257,5 @@ body {
 }
 
 .menu.aberto {
-
+    display: flex;
 }
