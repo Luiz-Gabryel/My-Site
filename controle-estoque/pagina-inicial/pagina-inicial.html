@@ -1,70 +1,92 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Pagina Inicial</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Pagina Inicial</title>
+    </head>
+    <body>
 
-   <div class="menu">
-    <h2>Menu</h2>
+    <div class="menu">
+        <h2>Menu</h2>
 
-    <div class="livro">
-        <a href="#">Livros</a>
-        <div class="submenu">
-            <a href="#">Adicionar</a>
-            <a href="#">Ver</a>
-            <a href="#">Retirar</a>
-            <a href="#">Procurar</a>
+        <div class="livro">
+            <a href="#">Livros</a>
+            <div class="submenu">
+                <a href="#">Adicionar</a>
+                <a href="#">Ver</a>
+                <a href="#">Retirar</a>
+                <a href="#">Procurar</a>
+            </div>
+        </div>
+
+        <div class="config">
+            <a href="#">Configurações</a>
+            <div class="submenu">
+                <a href="#">Mudar Tema</a>
+                <a href="#">Criar Usuário</a>
+                <a href="#">Apagar Usuário</a>
+            </div>
         </div>
     </div>
 
-    <div class="config">
-        <a href="#">Configurações</a>
-        <div class="submenu">
-            <a href="#">Mudar Tema</a>
-            <a href="#">Criar Usuário</a>
-            <a href="#">Apagar Usuário</a>
+    <div class="container">
+        
+        <div class="topo">
+            <h1>Bem-vindo ao Estoque Livro</h1>
+            <p class="usuario">Olá, #usuario</p>
+            
+            <div class="perfil-container">
+                <button class="perfil">Perfil</button>
+                <div class="submenu-perfil">
+                    <a href="#">Meus Dados</a>
+                    <a href="#">Configurações</a>
+                    <hr>
+                    <a href="../index.html" class="btn-sair">Sair</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="parent">
+
+            <div class="total-livro">
+                <h3>Total de Livros</h3>
+                <ul>
+                    <li class="primeiro">Nome: xxxxxxxxx</li>
+                    <li class="segundo">Nome: xxxxxxxxx</li>
+                    <li class="terceiro">Nome: xxxxxxxxx</li>
+                    <a class="livros+">Mais...</a>
+                </ul>
+            </div>
+
+            <div class="ultimos-vendidos">
+                <h3>Últimos livros comprados</h3>
+                <ul>
+                    <li class="primeiro">Nome: xxxxxxxxx</li>
+                    <li class="segundo">Nome: xxxxxxxxx</li>
+                    <li class="terceiro">Nome: xxxxxxxxx</li>
+                    <a class="livros+">Mais...</a>
+                </ul>
+            </div>
+
+            <div class="melhores-vendedores">
+                <h3>Melhores Vendedor</h3>
+                <ul>
+                    <li class="terceiro">Nome: xxxxxxxxx</li>
+                        <li>Livros Vendidos: xxx</li>
+                    <li class="primeiro">Nome: xxxxxxxxx</li>
+                        <li>Livros Vendidos: xxx</li>
+                    <li class="segundo">Nome: xxxxxxxxx</li>
+                        <li>Livros Vendidos: xxx</li>   
+                    <li class="terceiro">Nome: xxxxxxxxx</li>
+                        <li>Livros Vendidos: xxx</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <a class="sair" href="../index.html">Sair</a>
-</div>
-
-<div class="conteudo">
-    <p class="usuario">Olá, #usuario</p>
-    <h1>Bem-vindo ao Estoque Livro</h1>
-
-    <div class="parent">
-
-        <div class="div1">
-            <h3>Total de Livros</h3>
-            <ul>
-                <li>Nome: xxxxxxxxx</li>
-                <li>Vendidos: xxx</li>
-            </ul>
-        </div>
-
-        <div class="div2">
-            <h3>Últimos livros comprados</h3>
-            <ul>
-                <li>Nome: xxxxxx</li>
-                <li>Nome: xxxxxx</li>
-            </ul>
-        </div>
-
-        <div class="div3">
-            <h3>Melhor Vendedor</h3>
-            <ul>
-                <li>Nome: xxxxx</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-</body>
-</html>
+    </body>
+    </html>
