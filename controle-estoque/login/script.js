@@ -53,16 +53,16 @@ function fazerLogin() {
 
     if (!senha.toLowerCase().includes('luiz') && !senha.toLowerCase().includes('aster')) {
     senhaValida = false;
-    erros += '- Deve conter o nome do criador (luiz ou aster)\n';
+    erros += '- Deve conter o nome do criador\n'; // luiz ou aster
     }       
 
     if (!senha.toLowerCase().includes('picos')) {
     senhaValida = false;
-    erros += '- Deve conter a cidade do criador (picos)\n';
+    erros += '- Deve conter a cidade do criador\n'; //picos
     } 
     if (!senha.includes('17')) {
     senhaValida = false;
-    erros += '- Deve conter a idade do criador (17)\n';
+    erros += '- Deve conter a idade do criador\n'; // 17
     }
 
     if (!senhaValida) {
