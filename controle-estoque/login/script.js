@@ -7,7 +7,6 @@ function verSenha() {
     }
 }
 
-
 var tentativas = Number(localStorage.getItem('tentativas')) || 0;
 
 function fazerLogin() {
@@ -20,39 +19,40 @@ function fazerLogin() {
     }
 
     if (!/^[A-ZÀ-Ú]/.test(usuario)) {
-
         alert('O usuário deve começar com letra maiúscula.');
         return;
     }
 
     var senhaValida = true;
+    var erros = '';
 
     if (senha.length < 12) {
         senhaValida = false;
-        alert('A senha deve ter no mínimo 12 caracteres.');
+        erros += '- Mínimo 12 caracteres\n';
     }
 
     if (senha === senha.toLowerCase()) {
         senhaValida = false;
-        alert('A senha deve ter pelo menos uma letra maiúscula.');
+        erros += '- Pelo menos uma letra maiúscula\n';
     }
 
     if (senha === senha.toUpperCase()) {
         senhaValida = false;
-        alert('A senha deve ter pelo menos uma letra minúscula.');
+        erros += '- Pelo menos uma letra minúscula\n';
     }
 
     if (!senha.toLowerCase().includes('luiz') && !senha.toLowerCase().includes('aster')) {
         senhaValida = false;
-        alert('Senha incorreta.');
+        erros += '- Senha incorreta\n';
     }
 
     if (!senha.toLowerCase().includes('picos')) {
         senhaValida = false;
-        alert('Senha incorreta.');
+        erros += '- Senha incorreta\n';
     }
 
     if (!senhaValida) {
+        alert('A senha precisa ter:\n' + erros);
         tentativas++;
         localStorage.setItem('tentativas', tentativas);
         if (tentativas >= 10) {
