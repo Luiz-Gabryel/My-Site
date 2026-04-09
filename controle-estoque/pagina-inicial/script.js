@@ -1,3 +1,6 @@
+var nome = localStorage.getItem('usuario');
+document.querySelector('.usuario').textContent = 'Olá, ' + nome;
+
 var tema = 'claro';
 
 function alternarTema() {
