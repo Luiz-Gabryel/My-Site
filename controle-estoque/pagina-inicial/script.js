@@ -18,9 +18,9 @@ function abrirMenu() {
 
     if (menu.classList.contains('aberto')) {
         menu.classList.remove('aberto');
-        icone.className = 'icofont-angle-double-right';
+        icone.className = 'fa-solid fa-angles-right';
     } else {
         menu.classList.add('aberto');
-        icone.className = 'icofont icofont-angle-double-left';
+        icone.className = 'fa-solid fa-angles-left';
     }
 }
