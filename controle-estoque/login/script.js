@@ -1,4 +1,4 @@
-var tentativas = 0;
+var tentativas = Number(localStorage.getItem('tentativas')) || 0;
 
 function fazerLogin() {
     var usuario = document.getElementById('usuario').value;
@@ -19,28 +19,39 @@ function fazerLogin() {
     if (senha.length < 12) {
         senhaValida = false;
         alert('A senha deve ter no mínimo 12 caracteres.');
-    } else if (senha === senha.toLowerCase()) {
+    }
+
+    if (senha === senha.toLowerCase()) {
         senhaValida = false;
         alert('A senha deve ter pelo menos uma letra maiúscula.');
-    } else if (senha === senha.toUpperCase()) {
+    }
+
+    if (senha === senha.toUpperCase()) {
         senhaValida = false;
         alert('A senha deve ter pelo menos uma letra minúscula.');
-    } else if (!senha.includes('luiz') && !senha.includes('Luiz') && !senha.includes('aster') && !senha.includes('Aster')) {
+    }
+
+    if (!senha.toLowerCase().includes('luiz') && !senha.toLowerCase().includes('aster')) {
         senhaValida = false;
         alert('Senha incorreta.');
-    } else if (!senha.includes('picos') && !senha.includes('Picos')) {
+    }
+
+    if (!senha.toLowerCase().includes('picos')) {
         senhaValida = false;
         alert('Senha incorreta.');
     }
 
     if (!senhaValida) {
         tentativas++;
+        localStorage.setItem('tentativas', tentativas);
         if (tentativas >= 3) {
+            localStorage.removeItem('tentativas');
             location.href = 'https://youtu.be/VH8AHeB-QBs?list=RDVH8AHeB-QBs';
         }
         return;
     }
 
+    localStorage.removeItem('tentativas');
     localStorage.setItem('usuario', usuario);
     location.href = '../pagina-inicial/pagina-inicial.html';
 }
