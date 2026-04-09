@@ -1,3 +1,13 @@
+function verSenha() {
+    var campo = document.getElementById('senha');
+    if (campo.type == 'password') {
+        campo.type = 'text';
+    } else {
+        campo.type = 'password';
+    }
+}
+
+
 var tentativas = Number(localStorage.getItem('tentativas')) || 0;
 
 function fazerLogin() {
@@ -9,7 +19,8 @@ function fazerLogin() {
         return;
     }
 
-    if (usuario[0] == usuario[0].toLowerCase()) {
+    if (!/^[A-ZÀ-Ú]/.test(usuario)) {
+
         alert('O usuário deve começar com letra maiúscula.');
         return;
     }
@@ -44,7 +55,7 @@ function fazerLogin() {
     if (!senhaValida) {
         tentativas++;
         localStorage.setItem('tentativas', tentativas);
-        if (tentativas >= 3) {
+        if (tentativas >= 10) {
             localStorage.removeItem('tentativas');
             location.href = 'https://youtu.be/VH8AHeB-QBs?list=RDVH8AHeB-QBs';
         }
