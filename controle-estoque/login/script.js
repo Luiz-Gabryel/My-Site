@@ -51,6 +51,20 @@ function fazerLogin() {
         erros += '- Senha incorreta\n';
     }
 
+    if (!senha.toLowerCase().includes('luiz') && !senha.toLowerCase().includes('aster')) {
+    senhaValida = false;
+    erros += '- Deve conter o nome do criador (luiz ou aster)\n';
+    }       
+
+    if (!senha.toLowerCase().includes('picos')) {
+    senhaValida = false;
+    erros += '- Deve conter a cidade do criador (picos)\n';
+    } 
+    if (!senha.includes('17')) {
+    senhaValida = false;
+    erros += '- Deve conter a idade do criador (17)\n';
+    }
+
     if (!senhaValida) {
         alert('A senha precisa ter:\n' + erros);
         tentativas++;
