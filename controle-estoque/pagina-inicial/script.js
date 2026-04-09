@@ -12,15 +12,15 @@ function alternarTema() {
     }
 }
 
-function abrirMenu(){
-    var menu = document.getElementById('menu')
-    var botao = document.getElementById('btn-menu')
+function abrirMenu() {
+    var menu = document.getElementById('menu');
+    var icone = document.getElementById('icone-menu');
 
-    if (menu.classList.contains('aberto')){
+    if (menu.classList.contains('aberto')) {
         menu.classList.remove('aberto');
-        botao.textContent = '≡';
+        icone.className = 'icofont-angle-double-right';
     } else {
         menu.classList.add('aberto');
-        botao.textContent = '✕';
+        icone.className = 'icofont icofont-angle-double-left';
     }
 }
