@@ -7,11 +7,11 @@ function alternarTema() {
     if (tema == 'claro') {
         tema = 'escuro';
         document.documentElement.setAttribute('data-theme', 'escuro');
-        document.querySelector('.toggle-tema').textContent = 'Claro';
+        document.getElementById('btn-tema').textContent = 'Mudar Tema';
     } else {
         tema = 'claro';
         document.documentElement.setAttribute('data-theme', 'claro');
-        document.querySelector('.toggle-tema').textContent = 'Escuro';
+        document.getElementById('btn-tema').textContent = 'Mudar Tema';
     }
 }
 
@@ -25,5 +25,14 @@ function abrirMenu() {
     } else {
         menu.classList.add('aberto');
         icone.className = 'fa-solid fa-angles-left';
+    }
+}
+
+function toggleSubmenu(id) {
+    var submenu = document.getElementById(id);
+    if (submenu.style.display === 'flex') {
+        submenu.style.display = 'none';
+    } else {
+        submenu.style.display = 'flex';
     }
 }

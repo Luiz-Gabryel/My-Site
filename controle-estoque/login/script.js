@@ -7,8 +7,6 @@ function verSenha() {
     }
 }
 
-var tentativas = Number(localStorage.getItem('tentativas')) || 0;
-
 function fazerLogin() {
     var usuario = document.getElementById('usuario').value;
     var senha = document.getElementById('senha').value;
@@ -23,19 +21,11 @@ function fazerLogin() {
         return;
     }
 
-    }
-
-    if (!senhaValida) {
-        alert('A senha precisa ter:\n' + erros);
-        tentativas++;
-        localStorage.setItem('tentativas', tentativas);
-        if (tentativas >= 10) {
-            localStorage.removeItem('tentativas');
-            location.href = 'https://youtu.be/VH8AHeB-QBs?list=RDVH8AHeB-QBs';
-        }
+    if (senha.length < 8) {
+        alert('A senha precisa ter pelo menos 8 caracteres.');
         return;
     }
 
-    localStorage.removeItem('tentativas');
     localStorage.setItem('usuario', usuario);
     location.href = '../pagina-inicial/pagina-inicial.html';
+}

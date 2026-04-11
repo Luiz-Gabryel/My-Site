@@ -75,6 +75,7 @@ body {
     margin-left: 10px;
     border-radius: 6px;
     margin-top: 5px;
+    flex-direction: column;
 }
 
 .submenu a {
@@ -87,20 +88,6 @@ body {
 .livro, .config, .perfil {
     display: flex;
     flex-direction: column;
-}
-
-.livro:hover .submenu,
-.config:hover .submenu,
-.perfil:hover .submenu {
-    display: flex;
-    flex-direction: column;
-}
-
-.livro:hover > a,
-.config:hover > a,
-.perfil:hover > a {
-    background-color: #444;
-    color: #fff;
 }
 
 /* ===== MENU LATERAL - SAIR ===== */

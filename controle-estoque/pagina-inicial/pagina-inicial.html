@@ -18,8 +18,8 @@
     <h2>Menu</h2>
 
     <div class="livro">
-        <a href="#">Livros</a>
-        <div class="submenu">
+        <a href="#" onclick="toggleSubmenu('sub-livro'); return false;">Livros</a>
+        <div class="submenu" id="sub-livro">
             <a href="#">Adicionar</a>
             <a href="#">Ver</a>
             <a href="#">Retirar</a>
@@ -28,18 +28,18 @@
     </div>
 
     <div class="perfil">
-        <a href="#">Perfil</a>
-        <div class="submenu">
+        <a href="#" onclick="toggleSubmenu('sub-perfil'); return false;">Perfil</a>
+        <div class="submenu" id="sub-perfil">
             <a href="#">Meus Dados</a>
             <a href="#">Configurações</a>
         </div>
     </div>
 
     <div class="config">
-        <a href="#">Configurações</a>
-        <div class="submenu">
-            <a href="#">Mudar Tema</a>
-            <a href="#">Criar Usuário</a>
+        <a href="#" onclick="toggleSubmenu('sub-config'); return false;">Configurações</a>
+        <div class="submenu" id="sub-config">
+            <a href="#" onclick="alternarTema(); return false;" id="btn-tema">Mudar Tema</a>
+            <a href="../criar-conta/criar.html">Criar Usuário</a>
             <a href="#">Apagar Usuário</a>
         </div>
     </div>
@@ -54,7 +54,6 @@
             <h1>Bem-vindo ao Estoque Livro</h1>
             <p class="usuario">Olá, #usuario</p>
         </div>
-        <button class="toggle-tema" onclick="alternarTema()">Escuro</button>
     </div>
 
     <div class="parent">
