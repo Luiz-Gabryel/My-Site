@@ -23,37 +23,6 @@ function fazerLogin() {
         return;
     }
 
-    var senhaValida = true;
-    var erros = '';
-
-    if (senha.length < 12) {
-        senhaValida = false;
-        erros += '- Mínimo 12 caracteres\n';
-    }
-
-    if (senha === senha.toLowerCase()) {
-        senhaValida = false;
-        erros += '- Pelo menos uma letra maiúscula\n';
-    }
-
-    if (senha === senha.toUpperCase()) {
-        senhaValida = false;
-        erros += '- Pelo menos uma letra minúscula\n';
-    }
-
-    if (!senha.toLowerCase().includes('luiz') && !senha.toLowerCase().includes('aster')) {
-        senhaValida = false;
-        erros += '- Deve conter o nome do criador\n';
-    }
-
-    if (!senha.toLowerCase().includes('picos')) {
-        senhaValida = false;
-        erros += '- Deve conter a cidade do criador\n';
-    }
-
-    if (!senha.includes('17')) {
-        senhaValida = false;
-        erros += '- Deve conter a idade do criador\n';
     }
 
     if (!senhaValida) {
@@ -70,4 +39,3 @@ function fazerLogin() {
     localStorage.removeItem('tentativas');
     localStorage.setItem('usuario', usuario);
     location.href = '../pagina-inicial/pagina-inicial.html';
-}
