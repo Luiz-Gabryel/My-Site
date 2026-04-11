@@ -1,0 +1,15 @@
+# python
+venv/ q
+__pycache__/
+*.pyc
+*.pyo
+
+# environment
+.env
+
+# banco local
+*.db
+
+# sistema
+.DS_Store
+Thumbs.db
