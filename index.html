@@ -2,159 +2,200 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <!-- sem isso o celular fica com zoom bizarro como se fosse pc em miniatura -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luiz Gabryel | Portfólio</title>
 
-    <!-- meu css -->
+    <!-- responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Projetos e estudos de Luiz Gabryel, estudante de Desenvolvimento de Sistemas."
+    />
+
+    <title>Luiz Gabryel | Projetos</title>
+
+    <!-- css -->
     <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- icones do font awesome — nao esquece de carregar isso ou some tudo -->
+    <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <!-- fontes bonitas do google, carregando duas de uma vez - melhor nao mexer mais-->
+    <!-- fontes -->
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <!-- HEADER: primeira impressao, primeira inpre -->
+    <!-- HEADER -->
     <header>
       <div class="header-inner">
-        <!-- badge verde  -->
-        <div class="header-badge">Meus projetos</div>
+        <div class="header-badge">Meus Projetos</div>
 
         <h1>Luiz Gabryel</h1>
+
         <p>Estudante de Desenvolvimento de Sistemas</p>
 
-        <!-- tagzinhas das tecnologias que sei -->
+        <!-- tecnologias -->
         <div class="header-tags">
           <span>Python</span>
           <span>HTML & CSS</span>
+          <span>JavaScript</span>
           <span>GitHub</span>
         </div>
       </div>
     </header>
 
-    <!-- MAIN: conteudo principal separado do header e footer -->
+    <!-- MAIN -->
     <main>
-      <!-- SOBRE MIM: texto curto que fala quem sou, mas quem sou eu... Voce e o mais forte por ser gojo ou e gojo por ser o mais forte? -->
+      <!-- SOBRE -->
       <section class="sobre">
-        <h2>Sobre Mim</h2>
+        <h2>Sobre</h2>
+
         <p>
-          Sou estudante de TI com foco em desenvolvimento de sistemas.<br />
-          Atualmente estudo Python e construo projetos práticos para solidificar
-          meu aprendizado.
+          Sou estudante de TI com foco em desenvolvimento de sistemas.
+          Atualmente estudo Python, HTML, CSS e JavaScript, construindo projetos
+          práticos para evoluir minhas habilidades na programação.
         </p>
       </section>
 
-      <!-- PROJETOS: cards com links pros meus repos -->
+      <!-- PROJETOS -->
       <section class="projetos-section">
         <h2>Projetos</h2>
+
         <div class="projetos">
-          <!-- card 1: sistema de estoque em python -->
-          <!-- rel="noopener" e seguranca em links target blank -->
+          <!-- CARD 1 -->
           <a
             class="card"
             href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema/tree/main/luiz-gabryel/curso-tecnico/python/desafios/controle-estoque"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <div class="card-icon">📚</div>
+
             <h3>Controle de Estoque</h3>
-            <p>Sistema em Python para controle de livros.</p>
+
+            <p>Sistema em Python para gerenciamento e controle de livros.</p>
+
             <span class="card-tag">Python</span>
           </a>
 
-          <!-- card 2: esse site aqui mesmo - nao me pergunte pq -->
+          <!-- CARD 2 -->
           <a
             class="card"
             href="https://luiz-gabryel.vercel.app/"
-            rel="noopener"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <div class="card-icon">🌐</div>
-            <h3>Portfólio</h3>
-            <p>Site pessoal desenvolvido com HTML e CSS.</p>
+
+            <h3>Projetos</h3>
+
+            <p>
+              Site principal com meus projetos e estudos em desenvolvimento.
+            </p>
+
             <span class="card-tag">HTML · CSS</span>
           </a>
 
-          <!-- card 3: repositorio principal do curso -->
+          <!-- CARD 3 -->
           <a
             class="card"
             href="https://github.com/Luiz-Gabryel/Desenvolvimento-de-Sistema"
-            rel="noopener"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <div class="card-icon">💻</div>
+
             <h3>Repositório do Curso</h3>
-            <p>Todos os exercícios e desafios do curso técnico.</p>
+
+            <p>
+              Exercícios, desafios e projetos desenvolvidos no curso técnico.
+            </p>
+
             <span class="card-tag">GitHub</span>
           </a>
 
-          <!--  card 4: repositorio sobre atividades, basico sobre javascript-->
+          <!-- CARD 4 -->
           <a
             class="card"
             href="https://luiz-gabryel.vercel.app/em-manutencao/index.html"
-            rel="noopener"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <div class="card-icon">💻</div>
-            <h3>Repositório javascript</h3>
-            <p>Atividades passadas pelo professor.</p>
-            <span class="card-tag">HTML · CSS · JS</span>
+            <div class="card-icon">⚡</div>
+
+            <h3>Projetos JavaScript</h3>
+
+            <p>Atividades e exercícios desenvolvidos durante as aulas.</p>
+
+            <span class="card-tag"> HTML · CSS · JavaScript </span>
           </a>
 
-          <!--  card 5: repositorio Controle de estoque-->
+          <!-- CARD 5 -->
           <a
             class="card"
             href="https://luiz-gabryel.vercel.app/controle-estoque/index.html"
-            rel="noopener"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <div class="card-icon">#</div>
-            <h3>Login + Criar Conta</h3>
-            <p>Sistema de Login + Criar Conta + Recover .</p>
-            <span class="card-tag">HTML · CSS</span>
+            <div class="card-icon">🔐</div>
+
+            <h3>Sistema de Login</h3>
+
+            <p>
+              Sistema de autenticação com login, cadastro e recuperação de
+              senha.
+            </p>
+
+            <span class="card-tag"> HTML · CSS · JavaScript </span>
           </a>
-          <!--  card 6: Grupo Escolar-->
+
+          <!-- CARD 6 -->
           <a
             class="card"
             href="https://ds-team-hub.vercel.app"
-            rel="noopener"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <class="card-icon">?</div>
-            <h3>Grupo Escolar/h3>
-            <p>Grupo 2DS O Trio.</p>
-            <span class="card-tag">HTML · CSS</span>
+            <div class="card-icon">👥</div>
+
+            <h3>Grupo Escolar</h3>
+
+            <p>Projeto colaborativo desenvolvido pelo grupo 2DS O Trio.</p>
+
+            <span class="card-tag"> HTML · CSS · JavaScript </span>
           </a>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER: contatos e redes sociais — id="contato" pra quem quiser linkar direto aqui -->
+    <!-- FOOTER -->
     <footer id="contato">
       <h2>Entre em Contato</h2>
 
-      <!-- grid de botoes de contato — cada um e um link clicavel -->
       <div class="contato-grid">
-        <!-- tel: abre no celular automaticamente -->
+        <!-- telefone -->
         <a href="tel:+5511989017556" class="contato-item">
           <i class="fas fa-phone"></i>
           <span>(11) 98901-7556</span>
         </a>
 
-        <!-- meu email: abre o app de email -->
+        <!-- email -->
         <a href="mailto:luizgabryel515@gmail.com" class="contato-item">
           <i class="fas fa-envelope"></i>
           <span>luizgabryel515@gmail.com</span>
         </a>
 
-        <!-- github: abre numa aba nova -->
+        <!-- github -->
         <a
           href="https://github.com/luiz-gabryel"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="contato-item"
         >
           <i class="fab fa-github"></i>
@@ -162,12 +203,7 @@
         </a>
       </div>
 
-      <!-- copyright la embaixo, ano atualizado -->
       <p class="copyright">© 2026 — Luiz Gabryel</p>
     </footer>
   </body>
 </html>
-<!--           <h3>⚠️Em Manutenção⚠️</h3> 
-  https://luiz-gabryel.vercel.app/repo-js/repo-js-central/index.html
-  https://luiz-gabryel.vercel.app/em-manutencao/index.html
-  --->
